@@ -20,8 +20,8 @@ const CharacterSection = styled.div`
 const CharacterCardContainer = ({ characters }: CharacterCardContainerProps) => {
     return (
         <CharacterSection>
-            {characters.map((character) => (
-                <CharacterCard character={character} />
+            {characters.map((character, indx) => (
+                <CharacterCard key={indx} character={character} />
             ))}
         </CharacterSection>
     );
